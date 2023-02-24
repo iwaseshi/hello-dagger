@@ -6,8 +6,8 @@ on:
       - main
     tags-ignore:
       - "*"
-    paths:
-      - "nodejs/**"
+    # paths:
+    #   - "nodejs/**"
 
 jobs:
   dagger:
