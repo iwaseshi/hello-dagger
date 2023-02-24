@@ -9,13 +9,12 @@ on:
     paths:
       - "nodejs/**"
 
-defaults:
-  run:
-    working-directory: ./nodejs
-
 jobs:
   dagger:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+      working-directory: ./nodejs
     steps:
       - name: Checkout
         uses: actions/checkout@v3
