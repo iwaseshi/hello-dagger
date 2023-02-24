@@ -1,28 +1,18 @@
 {
-  "name": "hello-dagger",
-  "version": "0.0.0",
+  "name": "@projects/cicd",
+  "version": "1.0.0",
+  "license": "MPL-2.0",
   "private": true,
-  "workspaces": [
-    "pipeline/*"
-  ],
   "scripts": {
-    "dev": "turbo run dev --parallel",
-    "build": "turbo run build",
-    "clean": "turbo run clean",
-    "lint": "turbo run lint",
-    "fix": "turbo run fix",
-    "test": "turbo run test",
-    "ci": "yarn workspace @projects/cicd run ci",
-    "deploy": "turbo run deploy",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "ci": "node --loader ts-node/esm ./build.mts"
   },
+  "dependencies": {},
   "devDependencies": {
-    "prettier": "^2.7.1",
-    "turbo": "^1.4.2"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": "please_use_yarn_instead"
-  },
-  "packageManager": "yarn@1.22.19"
+    "@dagger.io/dagger": "^0.3.4",
+    "@types/node": "^18.11.19",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.2.1",
+    "typescript": "^4.9.5",
+    "vitest": "^0.23.4"
+  }
 }

@@ -1,20 +1,14 @@
 name: "ci for nodejs"
-
 on:
   push:
     branches-ignore:
       - main
     tags-ignore:
       - "*"
-    # paths:
-    #   - "nodejs/**"
-
 jobs:
   dagger:
     runs-on: ubuntu-latest
     steps:
-      - name: Change Working Directory
-        run: cd ./nodejs
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup node
